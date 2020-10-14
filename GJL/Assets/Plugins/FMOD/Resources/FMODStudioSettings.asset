@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: 
-  sourceBankPath: 
+  sourceProjectPath: FMOD Project File (Audio Design)/FMOD Project File (Audio Design).fspro
+  sourceBankPath: FMOD Project File (Audio Design)\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -74,7 +74,11 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master Bank
+  Banks:
+  - Ambience Bank
+  - Enemies Bank
+  - Player Bank
   BanksToLoad: []
   LiveUpdatePort: 9264
