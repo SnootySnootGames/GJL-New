@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{62808df4-a554-4f0b-9e02-dd34c5533371}">
+        <property name="assetPath">
+            <value>Ambience/Raven Caw 2.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.3467573696145125</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{f2966b6d-e36a-4fee-bd03-6dda77b00886}</destination>
+        </relationship>
+    </object>
+</objects>

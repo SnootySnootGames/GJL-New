@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{f6d134ed-0ef5-4494-ba44-c979bcfc5813}">
+        <property name="assetPath">
+            <value>Ghost/Ghost Noise 2.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.5</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{f2966b6d-e36a-4fee-bd03-6dda77b00886}</destination>
+        </relationship>
+    </object>
+</objects>
