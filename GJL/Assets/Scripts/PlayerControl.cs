@@ -9,7 +9,11 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Vector2 CastLeftDirection = new Vector2(-1f, 0f);
     [SerializeField] private Vector2 CastUpDirection = new Vector2(0f, 1f);
     [SerializeField] private Vector2 CastDownDirection = new Vector2(0f, -1f);
+    [SerializeField] private float speedBoostTimeLimit = 0.4f;
+    [SerializeField] private float speedBoostTimer = 0.4f;
 
+    private float baseMoveSpeed = 8f;
+    [SerializeField] private bool speedBoostBool = false;
     private Transform body;
     private float horizontal; //Used to store player input for x axis movement
     private float vertical;
@@ -24,6 +28,8 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        speedBoostTimer = speedBoostTimeLimit;
+        baseMoveSpeed = moveSpeed;
         body = transform;
     }
 
@@ -34,6 +40,7 @@ public class PlayerControl : MonoBehaviour
         InputCollection();
         CheckMovement();
         Movement();
+        SpeedBoost();
     }
 
     private void InputCollection()
@@ -123,6 +130,46 @@ public class PlayerControl : MonoBehaviour
         else
         {
             downMovementAllowed = true;
+        }
+    }
+
+    private void SpeedBoost()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            speedBoostBool = true;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (speedBoostBool == true)
+            {
+                moveSpeed = baseMoveSpeed * 3;
+                if (speedBoostTimer > 0)
+                {
+                    speedBoostTimer -= Time.deltaTime;
+                }
+                else
+                {
+                    speedBoostBool = false;
+                    moveSpeed = baseMoveSpeed;
+                }
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            speedBoostBool = false;
+            moveSpeed = baseMoveSpeed;
+        }
+
+        if (speedBoostBool == false && speedBoostTimer < speedBoostTimeLimit)
+        {
+            speedBoostTimer += Time.deltaTime;
+        }
+        else if (speedBoostTimer > speedBoostTimeLimit)
+        {
+            speedBoostTimer = speedBoostTimeLimit;
         }
     }
 }

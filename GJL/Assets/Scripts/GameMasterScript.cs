@@ -13,7 +13,7 @@ public class GameMasterScript : MonoBehaviour
 
     private void PauseGameInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             paused = !paused;
         }
@@ -30,5 +30,4 @@ public class GameMasterScript : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-
 }

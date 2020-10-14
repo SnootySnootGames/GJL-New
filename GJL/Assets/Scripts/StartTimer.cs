@@ -9,7 +9,8 @@ public class StartTimer : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
 
     private float timerReset = 120f;
-    private float timerUsed = 120f;
+    
+    public static float timerUsed = 120f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +32,10 @@ public class StartTimer : MonoBehaviour
             timerUsed -= Time.deltaTime;
             timerText.text = timerUsed.ToString("F2");
         }
+    }
+
+    private void CandyCollectedTimeBoost()
+    { 
+    
     }
 }
