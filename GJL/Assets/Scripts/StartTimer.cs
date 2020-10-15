@@ -27,15 +27,25 @@ public class StartTimer : MonoBehaviour
 
     private void TimerMethod()
     {
-        if (Time.timeScale > 0)
+        if (Time.timeScale > 0 && timerUsed > 0)
         {
             timerUsed -= Time.deltaTime;
             timerText.text = timerUsed.ToString("F2");
+        }
+        else
+        {
+            timerText.text = "ope";
+            GameOver();
         }
     }
 
     private void CandyCollectedTimeBoost()
     { 
     
+    }
+
+    private void GameOver()
+    {
+        Time.timeScale = 0;
     }
 }
