@@ -1,0 +1,175 @@
+{
+"skeleton": {
+	"hash": "EbPLtKufvH7A76vIuIjvAn82bd8",
+	"spine": "3.8.99",
+	"x": -312.06,
+	"y": -1.87,
+	"width": 620,
+	"height": 1479.93,
+	"images": "",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "base bone", "parent": "root", "x": -0.41, "y": 493.76 },
+	{ "name": "L-leg", "parent": "base bone", "length": 316.45, "rotation": -90.45, "x": -104.41, "y": -123.89 },
+	{ "name": "R-leg", "parent": "base bone", "length": 318.61, "rotation": -90.45, "x": 108.15, "y": -122.15 },
+	{ "name": "lower body", "parent": "base bone", "length": 314.15, "rotation": 90, "x": -0.58, "y": 1.61 },
+	{ "name": "upper body", "parent": "lower body", "length": 411.63, "x": 347.12, "y": -1.5 },
+	{ "name": "L-arm", "parent": "upper body", "length": 114.25, "rotation": 153.25, "x": -191.65, "y": 160.69 },
+	{ "name": "R-arm", "parent": "upper body", "length": 142.88, "rotation": -152.9, "x": -164.52, "y": -154.58 }
+],
+"slots": [
+	{ "name": "R-arm", "bone": "R-arm", "attachment": "R-arm" },
+	{ "name": "L-arm", "bone": "L-arm", "attachment": "L-arm" },
+	{ "name": "body", "bone": "lower body", "attachment": "body" },
+	{ "name": "R-leg", "bone": "L-leg", "attachment": "R-leg" },
+	{ "name": "L-right", "bone": "R-leg", "attachment": "L-right" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"L-arm": {
+				"L-arm": { "x": 77.53, "y": 2.54, "rotation": 116.75, "width": 100, "height": 115 }
+			},
+			"L-right": {
+				"L-right": { "x": 181.99, "y": -0.41, "rotation": 90.45, "width": 133, "height": 383 }
+			},
+			"R-arm": {
+				"R-arm": { "x": 103.49, "y": -11.31, "rotation": 62.9, "width": 104, "height": 113 }
+			},
+			"R-leg": {
+				"R-leg": { "x": 177.53, "y": 3.1, "rotation": 90.45, "width": 133, "height": 386 }
+			},
+			"body": {
+				"body": { "color": "fafeffff", "x": 243.7, "y": 1.08, "rotation": -90, "width": 620, "height": 1478 }
+			}
+		}
+	}
+],
+"animations": {
+	"idel": {
+		"bones": {
+			"L-arm": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": 5.64 },
+					{ "time": 0.6667, "angle": -2.78 },
+					{ "time": 1 }
+				]
+			},
+			"R-arm": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": 6.72 },
+					{ "time": 0.6667, "angle": -0.18 },
+					{ "time": 1 }
+				]
+			},
+			"upper body": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": -11.32 },
+					{ "time": 0.6667, "angle": 0.75 },
+					{ "time": 1 }
+				]
+			},
+			"lower body": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": -6.26 },
+					{ "time": 0.6667, "angle": 8.61 },
+					{ "time": 1 }
+				]
+			},
+			"L-leg": {
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": -17.75 },
+					{ "time": 0.6667, "x": 20.47 },
+					{ "time": 1 }
+				]
+			},
+			"R-leg": {
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": -16.38 },
+					{ "time": 0.6667, "x": 20.47, "y": 4.1 },
+					{ "time": 1 }
+				]
+			}
+		}
+	},
+	"walk": {
+		"bones": {
+			"L-arm": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": 2.57 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "angle": -0.78 },
+					{ "time": 0.6667 }
+				]
+			},
+			"R-arm": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": 2.03 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "angle": -2.94 },
+					{ "time": 0.6667 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": 11.78, "y": 5.89 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "x": 11.78, "y": 5.89 },
+					{ "time": 0.6667 }
+				]
+			},
+			"upper body": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": -4.46 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "angle": 7.57 },
+					{ "time": 0.6667 }
+				],
+				"translate": [
+					{ "time": 0.3333 },
+					{ "time": 0.5, "x": 1.7, "y": 12.86 },
+					{ "time": 0.6667 }
+				]
+			},
+			"lower body": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": -3.16 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "angle": 7.55 },
+					{ "time": 0.6667 }
+				]
+			},
+			"L-leg": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": -10.25, "y": 29.46 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "x": 15.58, "y": 3.52 },
+					{ "time": 0.6667 }
+				]
+			},
+			"R-leg": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": -11.27 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "x": 14.28, "y": 28.53 },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	}
+}
+}

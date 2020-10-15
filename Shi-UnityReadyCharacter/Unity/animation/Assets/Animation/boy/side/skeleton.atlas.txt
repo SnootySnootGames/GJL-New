@@ -1,0 +1,118 @@
+
+skeleton.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L-arm
+  rotate: true
+  xy: 934, 523
+  size: 182, 246
+  orig: 182, 246
+  offset: 0, 0
+  index: -1
+L-arm2
+  rotate: false
+  xy: 934, 707
+  size: 177, 314
+  orig: 177, 314
+  offset: 0, 0
+  index: -1
+L-feet
+  rotate: false
+  xy: 1033, 171
+  size: 227, 105
+  orig: 227, 105
+  offset: 0, 0
+  index: -1
+L-leg
+  rotate: false
+  xy: 860, 152
+  size: 171, 337
+  orig: 171, 337
+  offset: 0, 0
+  index: -1
+L-leg2
+  rotate: false
+  xy: 752, 144
+  size: 106, 345
+  orig: 106, 345
+  offset: 0, 0
+  index: -1
+R-arm
+  rotate: false
+  xy: 1139, 306
+  size: 96, 215
+  orig: 96, 215
+  offset: 0, 0
+  index: -1
+R-arm2
+  rotate: true
+  xy: 911, 40
+  size: 110, 239
+  orig: 110, 239
+  offset: 0, 0
+  index: -1
+R-feet
+  rotate: true
+  xy: 1033, 278
+  size: 243, 104
+  orig: 243, 104
+  offset: 0, 0
+  index: -1
+R-leg
+  rotate: false
+  xy: 405, 64
+  size: 345, 349
+  orig: 345, 349
+  offset: 0, 0
+  index: -1
+R-leg2
+  rotate: false
+  xy: 294, 58
+  size: 109, 355
+  orig: 109, 355
+  offset: 0, 0
+  index: -1
+back
+  rotate: true
+  xy: 0, 415
+  size: 606, 420
+  orig: 606, 420
+  offset: 0, 0
+  index: -1
+candy
+  rotate: true
+  xy: 752, 17
+  size: 125, 157
+  orig: 125, 157
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 422, 491
+  size: 530, 510
+  orig: 530, 510
+  offset: 0, 0
+  index: -1
+low body
+  rotate: false
+  xy: 1113, 729
+  size: 284, 292
+  orig: 284, 292
+  offset: 0, 0
+  index: -1
+neck
+  rotate: true
+  xy: 422, 417
+  size: 72, 79
+  orig: 72, 79
+  offset: 0, 0
+  index: -1
+up body
+  rotate: false
+  xy: 0, 0
+  size: 292, 413
+  orig: 292, 413
+  offset: 0, 0
+  index: -1
