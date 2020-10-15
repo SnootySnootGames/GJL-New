@@ -79,6 +79,7 @@ MonoBehaviour:
   Banks:
   - Ambience Bank
   - Enemies Bank
+  - Music Bank
   - Player Bank
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -6,9 +6,14 @@
 {8172b62e-b761-4d07-bf86-9816d8279a0f} event:/Player_Footsteps
 {915cd6e4-10de-4a7e-bd0f-7701068d4e31} event:/Speed_Boost
 {e76b55e4-50e2-4a5a-8aa4-1cacac42fb4d} event:/Spooky_Ambience
+{23a88ee4-3234-499a-a5b3-ad5853851bc8} event:/Gameplay_Music_1
+{6b6dc7e6-d8b8-49c8-8fc7-2cb135ad3279} event:/Gameplay_Music_2
+{cc882e61-cb3e-4fb4-96a7-7a373cb35268} event:/Menu_Music
+{7be0425a-af19-4db9-bc84-b3f4af1b9c4d} event:/Credits_Music
 {38776711-9cd3-47a3-870d-2f3432e0b146} bus:/
 {b00b251e-2a39-485e-b0a3-4f5feb3ec517} bus:/Reverb
 {aafa1b24-e8ff-4a08-8837-c01846eb8564} bank:/Ambience Bank
 {1838d0b4-df2d-4015-bb7f-3434e49f9153} bank:/Enemies Bank
 {e07f173b-5ea4-49c3-a8b5-9b9f06a5dea7} bank:/Player Bank
 {57386cdc-b34a-4fc3-b197-6f8ad52b1b84} bank:/Master Bank
+{603eada8-67d4-4cd4-a909-b15e8a4d2d27} bank:/Music Bank
