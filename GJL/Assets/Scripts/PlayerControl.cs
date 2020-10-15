@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Vector2 CastDownDirection = new Vector2(0f, -1f);
     [SerializeField] private float speedBoostTimeLimit = 0.4f;
     [SerializeField] private float speedBoostTimer = 0.4f;
+    [SerializeField] private GameObject afterImagePrefab;
 
     private float baseMoveSpeed = 8f;
     [SerializeField] private bool speedBoostBool = false;
@@ -148,6 +150,7 @@ public class PlayerControl : MonoBehaviour
                 if (speedBoostTimer > 0)
                 {
                     speedBoostTimer -= Time.deltaTime;
+                    StartCoroutine(AfterImageRoutine());
                 }
                 else
                 {
@@ -172,4 +175,16 @@ public class PlayerControl : MonoBehaviour
             speedBoostTimer = speedBoostTimeLimit;
         }
     }
+
+    private void InstantiateAfterImage()
+    {
+        Instantiate(afterImagePrefab, transform.position, Quaternion.identity);
+    }
+
+    private IEnumerator AfterImageRoutine()
+    {
+        InstantiateAfterImage();
+        yield return new WaitForSeconds(speedBoostTimeLimit/8);
+    }
+    
 }
