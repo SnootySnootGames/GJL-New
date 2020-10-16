@@ -10,10 +10,9 @@ public class AfterImageEffect : MonoBehaviour
 
     private Transform playerTran;
     private GameObject player;
-    private float alphaLimit = 0.8f;
+    private float alphaLimit = 0.9f;
     private float initialAlpha = 0.8f;
-    private float timeLimit = 0.4f;
-    private bool canBeDestroyed = false;
+    private float timeLimit = 0.8f;
 
     private void OnEnable()
     {

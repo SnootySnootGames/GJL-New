@@ -13,6 +13,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float speedBoostTimeLimit = 0.4f;
     [SerializeField] private float speedBoostTimer = 0.4f;
     [SerializeField] private GameObject afterImagePrefab;
+    [SerializeField] private Animator playerAni;
 
     private float baseMoveSpeed = 8f;
     [SerializeField] private bool speedBoostBool = false;
@@ -43,6 +44,7 @@ public class PlayerControl : MonoBehaviour
         CheckMovement();
         Movement();
         SpeedBoost();
+        PlayerAnimation();
     }
 
     private void InputCollection()
@@ -86,12 +88,19 @@ public class PlayerControl : MonoBehaviour
 
     private void CheckMovement()
     {
-        isMoving = horizontal != 0; //ismoving will set to true if horizontal is not equal to 0. This is a conditional expression
+        if (horizontal != 0 || vertical != 0)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
     }
 
     private void DetectCollisions()
     {
-        Vector2 pos = new Vector2(transform.position.x, transform.position.y);
+        Vector2 pos = new Vector2(transform.position.x - 0.26f, transform.position.y - 1.1f);
 
         RaycastHit2D hitRight = Physics2D.BoxCast(pos, BoxCastSize, 0f, CastRightDirection, 0.1f, collidableObject);
         RaycastHit2D hitLeft = Physics2D.BoxCast(pos, BoxCastSize, 0f, CastLeftDirection, 0.1f, collidableObject);
@@ -186,5 +195,33 @@ public class PlayerControl : MonoBehaviour
         InstantiateAfterImage();
         yield return new WaitForSeconds(speedBoostTimeLimit/8);
     }
-    
+
+    private void PlayerAnimation()
+    {
+
+        if (GameMasterScript.characterSelection == 0)
+        {
+            if (isMoving == false)
+            {
+                playerAni.Play("girl-idle");
+            }
+            else if (horizontal == 1)
+            {
+                playerAni.Play("girl-walk-right");
+            }
+            else if (horizontal == -1)
+            {
+                playerAni.Play("girl-walk-left");
+            }
+            else if (vertical == 1)
+            {
+                playerAni.Play("girl-walk-up");
+            }
+            else if (vertical == -1)
+            {
+                playerAni.Play("girl-walk-down");
+            }
+        }
+
+    }
 }

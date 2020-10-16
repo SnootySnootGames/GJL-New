@@ -5,6 +5,8 @@ public class GameMasterScript : MonoBehaviour
 
     [SerializeField] private bool paused = false;
 
+    public static int characterSelection = 0; //0 = girl, 1 = boy
+
     private void Update()
     {
         PauseGameInput();
