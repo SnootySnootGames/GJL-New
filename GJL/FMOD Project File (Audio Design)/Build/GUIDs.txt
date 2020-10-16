@@ -4,6 +4,7 @@
 {23a88ee4-3234-499a-a5b3-ad5853851bc8} event:/Gameplay_Music_1
 {6b6dc7e6-d8b8-49c8-8fc7-2cb135ad3279} event:/Gameplay_Music_2
 {4112d467-92c7-4bb6-b758-69a42db301c7} event:/Gameplay_Music_3
+{b33dae48-248a-420d-9899-53f92d00dbf7} event:/Gameplay_Music_4
 {5fd58785-b42f-4338-8372-2559c2f9645f} event:/Ghost_Noises
 {a338d5e3-9cc8-4872-b420-c8be56ba00df} event:/Light_Switch
 {cc882e61-cb3e-4fb4-96a7-7a373cb35268} event:/Menu_Music
