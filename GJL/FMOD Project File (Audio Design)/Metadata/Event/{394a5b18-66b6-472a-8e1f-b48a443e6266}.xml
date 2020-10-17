@@ -166,6 +166,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{3edb65e9-8e7b-4288-b2f5-5a3c80cf341f}">
+        <property name="volume">
+            <value>-6.5</value>
+        </property>
         <property name="name">
             <value>Layer 3</value>
         </property>
@@ -184,7 +187,7 @@
             <value>0.49999999999999989</value>
         </property>
         <property name="timelockedOffset">
-            <value>1.1000000000000005</value>
+            <value>1.0150000000000023</value>
         </property>
         <relationship name="modulators">
             <destination>{5e197344-f936-4a5f-a5f3-4a05a86faf68}</destination>
@@ -308,6 +311,7 @@
     <object class="MixerBusEffectChain" id="{e7b26d55-547e-4983-bd6a-d3cec31ceba8}">
         <relationship name="effects">
             <destination>{264f3d84-8c87-4ea8-aec2-475b972e2b2f}</destination>
+            <destination>{d013545f-6f13-49ce-bc7d-bb899cb85ab5}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{31bb6194-bb78-4601-95b0-cf4387899a86}"/>
@@ -419,7 +423,7 @@
     </object>
     <object class="AutomationPoint" id="{8f72b358-2901-466f-8d9a-3991a18aa431}">
         <property name="position">
-            <value>0.35000000000000131</value>
+            <value>0.35000000000000098</value>
         </property>
         <property name="value">
             <value>1</value>
@@ -430,11 +434,16 @@
     </object>
     <object class="AutomationPoint" id="{9b188ded-c1e1-4682-b38c-40efeb7b5c62}">
         <property name="position">
-            <value>0.50000000000000167</value>
+            <value>0.50000000000000133</value>
         </property>
         <property name="value">
             <value>0</value>
         </property>
     </object>
     <object class="MixerBusFader" id="{264f3d84-8c87-4ea8-aec2-475b972e2b2f}"/>
+    <object class="ThreeEQEffect" id="{d013545f-6f13-49ce-bc7d-bb899cb85ab5}">
+        <property name="highGain">
+            <value>-9</value>
+        </property>
+    </object>
 </objects>
