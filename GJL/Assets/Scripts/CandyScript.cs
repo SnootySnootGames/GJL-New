@@ -3,7 +3,13 @@
 public class CandyScript : MonoBehaviour
 {
 
+    [SerializeField] private int scorePerCandy = 10;
+    [SerializeField] private float comboTimerCount;
+    [SerializeField] private float comboTimerReset = 3f;
     [SerializeField] private Sprite[] candyChoices;
+
+    private bool comboEnded = true;
+    private int numberOfCandiesCollectedDuringCombo;
     private SpriteRenderer candySpriteRend;
 
     private void Start()
@@ -17,8 +23,8 @@ public class CandyScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Score.candyCollected = true;
             gameObject.SetActive(false);
-            StartTimer.timerUsed += 1;
         }
     }
 }

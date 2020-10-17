@@ -5,16 +5,18 @@ public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 8f; //Used to determine how fast the player speed will be, can be set in inspector
     [SerializeField] private LayerMask collidableObject;
-    [SerializeField] private Vector2 BoxCastSize = new Vector2(0.9f, 1f);
-    [SerializeField] private Vector2 CastRightDirection = new Vector2(1f, 0f);
-    [SerializeField] private Vector2 CastLeftDirection = new Vector2(-1f, 0f);
-    [SerializeField] private Vector2 CastUpDirection = new Vector2(0f, 1f);
-    [SerializeField] private Vector2 CastDownDirection = new Vector2(0f, -1f);
+    private Vector2 BoxCastSize = new Vector2(0.9f, 1f);
+    private Vector2 CastRightDirection = new Vector2(1f, 0f);
+    private Vector2 CastLeftDirection = new Vector2(-1f, 0f);
+    private Vector2 CastUpDirection = new Vector2(0f, 1f);
+    private Vector2 CastDownDirection = new Vector2(0f, -1f);
     [SerializeField] private float speedBoostTimeLimit = 0.4f;
     [SerializeField] private float speedBoostTimer = 0.4f;
     [SerializeField] private GameObject afterImagePrefab;
     [SerializeField] private Animator playerAni;
-
+    [SerializeField] private float afterImageTimeWait = 8f;
+   
+    private bool afterImageCanInstantiate = true;
     private float baseMoveSpeed = 8f;
     [SerializeField] private bool speedBoostBool = false;
     private Transform body;
@@ -159,7 +161,10 @@ public class PlayerControl : MonoBehaviour
                 if (speedBoostTimer > 0)
                 {
                     speedBoostTimer -= Time.deltaTime;
-                    StartCoroutine(AfterImageRoutine());
+                    if (afterImageCanInstantiate == true)
+                    {
+                        StartCoroutine(AfterImageRoutine());
+                    }
                 }
                 else
                 {
@@ -173,6 +178,7 @@ public class PlayerControl : MonoBehaviour
         {
             speedBoostBool = false;
             moveSpeed = baseMoveSpeed;
+            afterImageCanInstantiate = true;
         }
 
         if (speedBoostBool == false && speedBoostTimer < speedBoostTimeLimit)
@@ -192,8 +198,10 @@ public class PlayerControl : MonoBehaviour
 
     private IEnumerator AfterImageRoutine()
     {
+        afterImageCanInstantiate = false;
         InstantiateAfterImage();
-        yield return new WaitForSeconds(speedBoostTimeLimit/8);
+        yield return new WaitForSeconds(speedBoostTimeLimit/afterImageTimeWait);
+        afterImageCanInstantiate = true;
     }
 
     private void PlayerAnimation()
