@@ -60,7 +60,7 @@
     <object class="MarkerTrack" id="{5cd407b7-6ddf-4401-b2cf-2b77f1f0756d}"/>
     <object class="GroupTrack" id="{4b37a3be-52da-42a8-b5f8-ff1a1c46db48}">
         <relationship name="modules">
-            <destination>{dae536dc-7f3a-48aa-8e15-3d9c2132dc53}</destination>
+            <destination>{9918898d-aafd-4ebf-9f95-aa43e2fb4e35}</destination>
         </relationship>
         <relationship name="mixerGroup">
             <destination>{7651f8dd-f9de-4bd4-a93b-ffe92d3eb7ad}</destination>
@@ -68,10 +68,10 @@
     </object>
     <object class="Timeline" id="{632d1963-4e91-4848-8396-f509d40ecbdc}">
         <relationship name="modules">
-            <destination>{dae536dc-7f3a-48aa-8e15-3d9c2132dc53}</destination>
+            <destination>{9918898d-aafd-4ebf-9f95-aa43e2fb4e35}</destination>
         </relationship>
         <relationship name="markers">
-            <destination>{03147079-cc7d-44a6-bb82-f838a49f935d}</destination>
+            <destination>{5b5cd188-ff65-420d-b0c8-4e2a6c8ca0b9}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{93d93a76-f400-4404-bb5b-ec08698fad1f}">
@@ -91,17 +91,17 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{8896a52c-549e-467e-b212-e8f5edeb37d9}"/>
-    <object class="SingleSound" id="{dae536dc-7f3a-48aa-8e15-3d9c2132dc53}">
+    <object class="SingleSound" id="{9918898d-aafd-4ebf-9f95-aa43e2fb4e35}">
         <property name="length">
             <value>30.857142857142858</value>
         </property>
         <relationship name="audioFile">
-            <destination>{c30045b2-01f5-4d93-93b4-d0525efb7a3e}</destination>
+            <destination>{7975c3c9-11af-4f32-be38-7f46647f6a14}</destination>
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{7651f8dd-f9de-4bd4-a93b-ffe92d3eb7ad}">
         <property name="volume">
-            <value>2</value>
+            <value>4.5</value>
         </property>
         <property name="name">
             <value>Audio 1</value>
@@ -116,7 +116,7 @@
             <destination>{93d93a76-f400-4404-bb5b-ec08698fad1f}</destination>
         </relationship>
     </object>
-    <object class="LoopRegion" id="{03147079-cc7d-44a6-bb82-f838a49f935d}">
+    <object class="LoopRegion" id="{5b5cd188-ff65-420d-b0c8-4e2a6c8ca0b9}">
         <property name="position">
             <value>0</value>
         </property>
