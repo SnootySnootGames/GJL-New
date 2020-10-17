@@ -23,10 +23,10 @@ public class PlayerControl : MonoBehaviour
     private float horizontal; //Used to store player input for x axis movement
     private float vertical;
     private float DiagnolSpeedReduction = 0.7f;
-    private bool rightMovementAllowed = true;
-    private bool lefttMovementAllowed = true;
-    private bool upMovementAllowed = true;
-    private bool downMovementAllowed = true;
+    [SerializeField] private bool rightMovementAllowed = true;
+    [SerializeField] private bool lefttMovementAllowed = true;
+    [SerializeField] private bool upMovementAllowed = true;
+    [SerializeField] private bool downMovementAllowed = true;
 
     public bool isMoving = false; //public bool used to let other potential scripts to know player is moving
 
@@ -44,7 +44,7 @@ public class PlayerControl : MonoBehaviour
         DetectCollisions();
         InputCollection();
         CheckMovement();
-        Movement();
+        //Movement();
         SpeedBoost();
         PlayerAnimation();
     }
@@ -54,6 +54,7 @@ public class PlayerControl : MonoBehaviour
         //Gives a value between -1 and 1. Uses old input manager. Can be viewd in Unity via Edit>Project Settings>Input Manager>Axes drop down arrow
         horizontal = Input.GetAxisRaw("Horizontal"); //-1 is left,use getaxisraw if you want snappy controls
         vertical = Input.GetAxisRaw("Vertical");
+        Movement();
     }
 
     private void Movement() //physics behind horizontal movement
@@ -65,15 +66,18 @@ public class PlayerControl : MonoBehaviour
         {
             horizontalSpeed = 0;
         }
-        else if (horizontal < 0 && lefttMovementAllowed == false)
+        
+        if (horizontal < 0 && lefttMovementAllowed == false)
         {
             horizontalSpeed = 0;
         }
-        else if (vertical > 0 && upMovementAllowed == false)
+
+        if (vertical > 0 && upMovementAllowed == false)
         {
             verticalSpeed = 0;
         }
-        else if (vertical < 0 && downMovementAllowed == false)
+
+        if (vertical < 0 && downMovementAllowed == false)
         {
             verticalSpeed = 0;
         }
@@ -108,6 +112,50 @@ public class PlayerControl : MonoBehaviour
         RaycastHit2D hitLeft = Physics2D.BoxCast(pos, BoxCastSize, 0f, CastLeftDirection, 0.1f, collidableObject);
         RaycastHit2D hitUp = Physics2D.BoxCast(pos, BoxCastSize, 0f, CastUpDirection, 0.1f, collidableObject);
         RaycastHit2D hitDown = Physics2D.BoxCast(pos, BoxCastSize, 0f, CastDownDirection, 0.1f, collidableObject);
+
+/*        if (hitRight.collider != null && hitUp.collider != null)
+        {
+            rightMovementAllowed = false;
+            upMovementAllowed = false;
+        }
+        else
+        {
+            rightMovementAllowed = true;
+            upMovementAllowed = true;
+        }
+
+        if (hitLeft.collider != null && hitUp.collider != null)
+        {
+            lefttMovementAllowed = false;
+            upMovementAllowed = false;
+        }
+        else
+        {
+            lefttMovementAllowed = true;
+            upMovementAllowed = true;
+        }
+
+        if (hitRight.collider != null && hitDown.collider != null)
+        {
+            rightMovementAllowed = false;
+            downMovementAllowed = false;
+        }
+        else
+        {
+            rightMovementAllowed = true;
+            downMovementAllowed = true;
+        }
+
+        if (hitLeft.collider != null && hitDown.collider != null)
+        {
+            lefttMovementAllowed = false;
+            downMovementAllowed = false;
+        }
+        else
+        {
+            lefttMovementAllowed = true;
+            downMovementAllowed = true;
+        }*/
 
         if (hitRight.collider != null)
         {
