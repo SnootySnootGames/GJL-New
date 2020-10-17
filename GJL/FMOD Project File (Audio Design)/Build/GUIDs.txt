@@ -1,3 +1,4 @@
+{915cd6e4-10de-4a7e-bd0f-7701068d4e31} event:/Old/Speed_Boost (Old)
 {8507e6cc-1718-4036-be6e-d1fa1a7f13e1} event:/Candy_Grab
 {86dbdafc-77d1-4bb5-8f54-ea561b8cf4fa} event:/Candy_Steal
 {7be0425a-af19-4db9-bc84-b3f4af1b9c4d} event:/Credits_Music
@@ -10,7 +11,7 @@
 {cc882e61-cb3e-4fb4-96a7-7a373cb35268} event:/Menu_Music
 {e018c4e3-0215-466b-a303-40441f907a2f} event:/Monster_Sounds
 {8172b62e-b761-4d07-bf86-9816d8279a0f} event:/Player_Footsteps
-{915cd6e4-10de-4a7e-bd0f-7701068d4e31} event:/Speed_Boost
+{394a5b18-66b6-472a-8e1f-b48a443e6266} event:/Speed_Boost
 {e76b55e4-50e2-4a5a-8aa4-1cacac42fb4d} event:/Spooky_Ambience
 {38776711-9cd3-47a3-870d-2f3432e0b146} bus:/
 {b00b251e-2a39-485e-b0a3-4f5feb3ec517} bus:/Reverb
