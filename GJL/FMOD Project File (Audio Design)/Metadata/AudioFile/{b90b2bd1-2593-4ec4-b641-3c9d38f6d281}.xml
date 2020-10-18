@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{b90b2bd1-2593-4ec4-b641-3c9d38f6d281}">
+        <property name="assetPath">
+            <value>Speed Boost/Speed Boost Layer 10.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.30281179138322</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{f2966b6d-e36a-4fee-bd03-6dda77b00886}</destination>
+        </relationship>
+    </object>
+</objects>
